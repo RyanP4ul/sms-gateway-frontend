@@ -1,7 +1,9 @@
 import 'server-only';
 
+import { COOKIE_NAME } from './constants';
+
 export const BACKEND_URL = (process.env.BACKEND_URL ?? 'http://localhost:3001').replace(/\/$/, '');
-export const COOKIE_NAME = 'sms_admin_token';
+export { COOKIE_NAME };
 export const cookieOptions = {
   httpOnly: true,
   sameSite: 'strict' as const,
